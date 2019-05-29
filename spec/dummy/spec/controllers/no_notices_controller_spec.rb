@@ -3,7 +3,7 @@ require 'rails_helper'
 describe NoNoticesController do
   describe 'display_notices: false' do
     describe 'POST :create' do
-      let(:action) { post :create, page: {title: 'Some title'} }
+      let(:action) { post :create, params: { page: {title: 'Some title'} } }
 
       context 'when authorized' do
         before { allow(controller).to receive(:current_user).and_return(User.new) }

@@ -54,7 +54,7 @@ RSpec.describe PagesController, type: :controller do
 
   describe 'POST :create' do
     let(:action) do
-      post :create, page: {title: 'Some title'}
+      post :create, params: { page: {title: 'Some title'} }
     end
 
     context 'when signed in' do
@@ -89,7 +89,7 @@ RSpec.describe PagesController, type: :controller do
   describe 'GET :edit' do
     render_views
 
-    let(:action) { get :edit, id: page.id }
+    let(:action) { get :edit, params: { id: page.id } }
 
     context 'when signed in' do
       before { allow(controller).to receive(:current_user).and_return(User.new) }
@@ -104,7 +104,7 @@ RSpec.describe PagesController, type: :controller do
 
   describe 'PUT :update' do
     let(:action) do
-      put :update, id: page.id, page: {title: 'New title'}
+      put :update, params: { id: page.id, page: {title: 'New title'} }
     end
 
     context 'when signed in' do
@@ -129,7 +129,7 @@ RSpec.describe PagesController, type: :controller do
   end
 
   describe 'DELETE :destroy' do
-    let(:action) { delete :destroy, id: page.id }
+    let(:action) { delete :destroy, params: { id: page.id } }
 
     context 'when signed in' do
       before { allow(controller).to receive(:current_user).and_return(User.new) }

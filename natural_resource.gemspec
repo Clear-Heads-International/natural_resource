@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 5.0"
   s.add_dependency "pundit", "~> 1.0"
-  s.add_dependency "ransack", "~> 1.7"
+  s.add_dependency "ransack", "~> 2.1"
   s.add_dependency "will_paginate", "~> 3.0"
 
   s.add_development_dependency "pry", '~> 0.10'
