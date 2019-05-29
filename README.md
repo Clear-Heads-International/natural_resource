@@ -1,5 +1,8 @@
 # Natural Resource
 
+## Compatibility Note
+If you're running Rails version < 5.0, please use v0.2.0. Otherwise, use the latest version.
+
 <img src="http://www.terracoding.com/assets/images/natural-resource.png" alt="Logo" height="200px"/>
 
 Natural Resource is a small but opinionated framework built ontop of some of our favourite gems. It is designed to speed up CRUD related activities whilst still maintaining sensible standards (e.g. Admin Panel, expandable principles for an API). It utilises [Pundit](https://github.com/elabs/pundit) for authorisation and [Ransack](https://github.com/activerecord-hackery/ransack) for searching and filtering.
